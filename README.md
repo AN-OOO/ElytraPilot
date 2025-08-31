@@ -1,4 +1,4 @@
-# ElytraPilot
+## ElytraPilot
 说在前面~本人是完全的由于兴趣爱好而写，不从事计算机行业，所以没有代码规范的意识，创建这个库也只是想留下点什么而已，证明我来过！
 
 这是是一个用于在我的世界(MineCraft)末地中进行自动飞行的Mod,目的是为了辅助玩家在末地长距离飞行或者寻找鞘翅的枯燥过程(无规则政府服务器)，如果想要实现全自动的收集鞘翅，你需要与Hack端一起使用(打开杀戮，鞘翅更换，自动补充快捷栏物品等必要功能)。
@@ -18,6 +18,7 @@ Automatically fly to a set destination in the End, or use a coordinate file to a
 
 4./stop         停止自动飞行
 
-## [![演示视频](https://i0.hdslb.com/bfs/archive/114827477650208.jpg)](https://www.bilibili.com/video/BV1KaGgzWEbA)
+## 演示视频
+## [![演示视频](https://i2.hdslb.com/bfs/archive/be5ee3516cb84f35500a66a3dfe18b6946ffb0c6.jpg@518w_290h_1c_!web-video-share-cover.avif)](https://www.bilibili.com/video/BV1KaGgzWEbA)
 
 
