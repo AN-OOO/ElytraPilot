@@ -5,7 +5,7 @@
 
 Automatically fly to a set destination in the End, or use a coordinate file to automatically fly to End Ships.With a utility client,it can automatically collect elytras.（AnarchyServer）
 
-当然如果你有足够的实力，完全可以更改源码来独立实现上述需要Hack端提供的功能~
+当然你完全可以更改源码来独立实现上述需要Hack端提供的功能~
 
 本人不做任何后续更新升级，Bug修复。你可以下载源码自行更改升级~
 
@@ -18,6 +18,6 @@ Automatically fly to a set destination in the End, or use a coordinate file to a
 
 4./stop         停止自动飞行
 
-## 视频演示
-<iframe src="//player.bilibili.com/player.html?isOutside=true&aid=114827477650208&bvid=BV1KaGgzWEbA&cid=30952850983&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
+## [![演示视频](https://i0.hdslb.com/bfs/archive/114827477650208.jpg)](https://www.bilibili.com/video/BV1KaGgzWEbA)
+
 
