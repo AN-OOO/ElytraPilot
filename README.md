@@ -11,8 +11,13 @@ Automatically fly to a set destination in the End, or use a coordinate file to a
 
 ## 使用方法 prefix：@ANElytraPilot
 1./File         导入使用种子结构坐标导出工具导出的.txt后缀坐标文件
+
 2./setTarget    设置目标点(不论你是导航向目标点还是鞘翅坐标)
+
 3./FlyTo        选择自动飞行的模式，FlyToTarget/FlyToElytra
+
 4./stop         停止自动飞行
 
+## 视频演示
+<iframe src="//player.bilibili.com/player.html?isOutside=true&aid=114827477650208&bvid=BV1KaGgzWEbA&cid=30952850983&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
 
