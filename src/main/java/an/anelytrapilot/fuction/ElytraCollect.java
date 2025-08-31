@@ -152,7 +152,6 @@ public class ElytraCollect {
     public static void ElytraMove() {
         List<Pair<Integer, ItemStack>> elytraList = new ArrayList<>();
 
-        // 找出所有 Elytra 并记录 slot index
         for (int i = 9; i < 36; i++) {
             ItemStack stack = mc.player.getInventory().getStack(i);
             if (stack.getItem() == Items.ELYTRA) {
@@ -185,12 +184,8 @@ public class ElytraCollect {
 
     public static boolean IsShulkerBoxFull() {
         if (!(mc.player.currentScreenHandler instanceof ShulkerBoxScreenHandler handler)) {
-            // 当前界面不是普通容器 (潜影盒也是 GenericContainerScreenHandler)
             return false;
         }
-
-        // 若想更精准判断是潜影盒，可查看容器标题或物品类型
-
         boolean isFull = true;
 
         // 潜影盒容量固定 27 个格子 (slots 0~26)
@@ -331,7 +326,7 @@ public class ElytraCollect {
             ItemStack stack = inv.getStack(i);
             if (!stack.isEmpty() && stack.getItem() == Items.SHULKER_BOX) {
                 ContainerComponent compoundTag = stack.get(DataComponentTypes.CONTAINER);
-                // 如果容器组件为空，则潜影盒是空的
+
                 if (compoundTag.stream().toList().size() < 27) {
                     mc.player.getInventory().selectedSlot = i;
 
@@ -348,7 +343,7 @@ public class ElytraCollect {
             ItemStack stack = inv.getStack(i);
             if (!stack.isEmpty() && stack.getItem() == Items.SHULKER_BOX) {
                 ContainerComponent compoundTag = stack.get(DataComponentTypes.CONTAINER);
-                // 如果容器组件为空，则潜影盒是空的
+
                 if (compoundTag.stream().toList().size() == 27) return true;
             }
         }

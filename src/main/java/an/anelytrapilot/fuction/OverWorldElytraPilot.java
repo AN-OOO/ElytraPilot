@@ -109,7 +109,7 @@ public class OverWorldElytraPilot {
                 mc.player.setPitch(lerpPitch(-10.0f,0.2f));
                 ElytraObstacleAvoider.ANavoidObstacles();
                 if (mc.player.isOnGround()) {
-                    mc.player.jump(); // 模拟跳跃
+                    mc.player.jump();
                     new Thread(() -> {
                         try {
                             Thread.sleep(100); // 延迟 150 毫秒，大概 2 tick

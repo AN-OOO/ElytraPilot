@@ -11,7 +11,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 
 @Mixin(ClientPlayNetworkHandler.class)
-public class IIIIIllllIIIll {
+public class ClientPlayNetworkHandlerMixin {
     @Inject(method = "sendChatMessage", at = @At("HEAD"), cancellable = true)
     private void sendChatMessageHook(@NotNull String message, CallbackInfo ci) {
 

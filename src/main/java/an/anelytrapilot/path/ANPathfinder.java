@@ -58,15 +58,12 @@ public class ANPathfinder {
 
         int iterations = 0;
         while (!openList.isEmpty() && iterations < MAX_ITERATIONS) {
-            // 获取 fCost 最小的节点
             Node current = openList.poll();
-            // 如果到达终点，重建路径并返回
             if (current.pos.equals(end)) {
                 return reconstructPath(current);
             }
             closedList.add(current);
 
-            // 检查所有邻居节点
             for (BlockPos neighborPos : getNeighbors(world, current.pos)) {
                 if (closedList.stream().anyMatch(n -> n.pos.equals(neighborPos))) continue;
 
@@ -77,7 +74,6 @@ public class ANPathfinder {
                         .findFirst()
                         .orElse(new Node(neighborPos));
 
-                // 如果找到更优路径或新节点，更新节点信息
                 if (tentativeGCost < neighbor.gCost || !openList.contains(neighbor)) {
                     neighbor.parent = current;
                     neighbor.gCost = tentativeGCost;
@@ -105,10 +101,10 @@ public class ANPathfinder {
         List<BlockPos> neighbors = new ArrayList<>();
 
         BlockPos up = pos.up();
-        BlockPos jumpTarget = up; // 玩家要跳到这里
+        BlockPos jumpTarget = up;
 
-        if (isSolidGround(world, pos.down())  // 起跳地面
-                && isStandable(world, jumpTarget) // 跳上的目标
+        if (isSolidGround(world, pos.down())
+                && isStandable(world, jumpTarget)
                 && world.getBlockState(jumpTarget.up()).getCollisionShape(world, jumpTarget.up()).isEmpty()) { // 头部空间
             neighbors.add(jumpTarget);
         }

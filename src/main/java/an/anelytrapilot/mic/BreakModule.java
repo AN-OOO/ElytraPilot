@@ -14,12 +14,9 @@ import static an.anelytrapilot.fuction.EndElytraPilot.lerpYaw;
 public class BreakModule {
     private static final MinecraftClient mc = MinecraftClient.getInstance();
 
-    // 当前正在挖的方块
     private static BlockPos targetBlock = null;
 
-    /**
-     * 开始破坏指定方块
-     */
+
     public static void startBreaking(BlockPos pos) {
         if (mc.player == null || mc.world == null) return;
 
@@ -36,9 +33,7 @@ public class BreakModule {
         mc.player.swingHand(Hand.MAIN_HAND);
     }
 
-    /**
-     * 每 tick 调用，持续破坏方块
-     */
+
     public static void continueBreaking() {
         if (targetBlock == null || mc.player == null || mc.world == null) return;
 
@@ -54,9 +49,6 @@ public class BreakModule {
         mc.player.swingHand(Hand.MAIN_HAND);
     }
 
-    /**
-     * 手动取消破坏
-     */
     public static void cancelBreaking() {
         targetBlock = null;
     }

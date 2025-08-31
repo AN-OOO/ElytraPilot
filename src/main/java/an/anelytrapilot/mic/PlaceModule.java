@@ -7,7 +7,7 @@
 
 package an.anelytrapilot.mic;
 
-import an.anelytrapilot.mixin.IIllIIllIIlll;
+import an.anelytrapilot.mixin.ClientWorldMixin;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.network.PendingUpdateManager;
 import net.minecraft.client.network.SequencedPacketCreator;
@@ -96,7 +96,7 @@ public class PlaceModule {
 
     public static void sendSequencedPacket(SequencedPacketCreator packetCreator) {
         if (mc.getNetworkHandler() == null || mc.world == null) return;
-        try (PendingUpdateManager pendingUpdateManager = ((IIllIIllIIlll) mc.world).getPendingUpdateManager22().incrementSequence();) {
+        try (PendingUpdateManager pendingUpdateManager = ((ClientWorldMixin) mc.world).getPendingUpdateManager22().incrementSequence();) {
             int i = pendingUpdateManager.getSequence();
             mc.getNetworkHandler().sendPacket(packetCreator.predict(i));
         }

@@ -6,7 +6,7 @@ import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.gen.Accessor;
 
 @Mixin(ClientWorld.class)
-public interface IIllIIllIIlll {
+public interface ClientWorldMixin {
     @Accessor("pendingUpdateManager")
     PendingUpdateManager getPendingUpdateManager22();
 }

@@ -17,7 +17,7 @@ import java.util.concurrent.CompletableFuture;
 import an.anelytrapilot.commend.cmdmanage.CommandInit;
 
 @Mixin(ChatInputSuggestor.class)
-public abstract class lllIIIllIIllIIll {
+public abstract class ChatInputSuggestorMixin {
     @Final @Shadow TextFieldWidget textField;
     @Shadow boolean completingSuggestions;
     @Shadow private ParseResults<CommandSource> parse;

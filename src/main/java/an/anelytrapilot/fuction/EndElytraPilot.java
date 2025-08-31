@@ -157,7 +157,7 @@ public class EndElytraPilot {
 
                 if(escapeStartTime==0)escapeStartTime = mc.world.getTime();
                 if (mc.player.isOnGround()) {
-                    mc.player.jump(); // 模拟跳跃
+                    mc.player.jump();
                     new Thread(() -> {
                         try {
                             Thread.sleep(200); // 延迟 150 毫秒，大概 2 tick
@@ -551,32 +551,6 @@ public class EndElytraPilot {
     }
 
  */
-
-    // 检测桥的方向
-    private static Direction detectBridgeDirection(BlockPos elytraPos) {
-        // 从鞘翅坐标向外搜索紫珀方块（桥）
-        int searchDistance = 10; // 搜索范围，覆盖桥的长度
-        for (Direction dir : new Direction[]{Direction.NORTH, Direction.SOUTH, Direction.EAST, Direction.WEST}) {
-            int purpurCount = 0;
-            BlockPos pos = elytraPos;
-
-            // 沿当前方向检查连续的紫珀方块
-            for (int i = 0; i < searchDistance; i++) {
-                pos = pos.offset(dir);
-                if (mc.world.getBlockState(pos).getBlock() == Blocks.PURPUR_BLOCK) {
-                    purpurCount++;
-                    if (purpurCount >= 3) { // 连续3个紫珀方块确认是桥
-                        return dir;
-                    }
-                } else {
-                    break; // 非紫珀方块，停止搜索
-                }
-            }
-        }
-
-        // 默认方向（如果未找到桥，假设沿Z轴）
-        return Direction.SOUTH;
-    }
 
     private static int countElytra() {
         ClientPlayerEntity player = mc.player;
