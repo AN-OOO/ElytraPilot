@@ -1,0 +1,12 @@
+package an.anelytrapilot.mixin;
+
+import net.minecraft.client.network.PendingUpdateManager;
+import net.minecraft.client.world.ClientWorld;
+import org.spongepowered.asm.mixin.Mixin;
+import org.spongepowered.asm.mixin.gen.Accessor;
+
+@Mixin(ClientWorld.class)
+public interface IIllIIllIIlll {
+    @Accessor("pendingUpdateManager")
+    PendingUpdateManager getPendingUpdateManager22();
+}

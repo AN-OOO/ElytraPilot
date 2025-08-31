@@ -1,0 +1,33 @@
+{
+	"schemaVersion": 1,
+	"id": "anelytrapilot",
+	"version": "${version}",
+	"name": "ANElytraPilot",
+	"description": "This is A Path-finding tool!",
+	"authors": [
+		"AN-G"
+	],
+	"contact": {
+
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/anelytrapilot/LOGO.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"an.anelytrapilot.ANElytraPilot"
+		]
+	},
+	"mixins": [
+		"anelytrapilot.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.16.14",
+		"minecraft": "~1.21.4",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}

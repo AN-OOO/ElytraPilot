@@ -1,0 +1,16 @@
+{
+	"required": true,
+	"package": "an.anelytrapilot.mixin",
+	"compatibilityLevel": "JAVA_21",
+	"mixins": [
+		"IIIIIllllIIIll",
+		"IIllIIllIIlll",
+		"lllIIIllIIllIIll"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	},
+	"overwrites": {
+		"requireAnnotations": true
+	}
+}
