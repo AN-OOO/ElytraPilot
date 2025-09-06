@@ -9,6 +9,8 @@ Automatically fly to a set destination in the End, or use a coordinate file to a
 
 本人不做任何后续更新升级，Bug修复。你可以下载源码自行更改升级~
 
+请在MC启动器里下载Mod(CurseForge源)
+
 ## 使用方法 prefix：@ANElytraPilot
 | 命令 | 描述 | 示例 |
 |------|------|------|
